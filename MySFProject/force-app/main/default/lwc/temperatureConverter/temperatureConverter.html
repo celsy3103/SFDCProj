@@ -1,0 +1,20 @@
+<!--
+  @description       : This is an LWC to convert Celsius temperature to Fahrenheit.
+  @author            : Diganta Das
+  @last modified on  : 06-02-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Temperature Converter" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+            <lightning-input label="Temperature (Celsius)" type="number" value={celsiusTemperature} step="any" onchange={handleInput}></lightning-input>
+            <lightning-input label="Temperature (Fahrenheit)" value={convertedTemperature} read-only="true"></lightning-input>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <div class = "slds-align_absolute-center">
+                <lightning-button class="slds-button_brand" variant="brand" label="Submit" title="Submit" onclick={handleConvert}></lightning-button>
+                &nbsp;&nbsp;
+                <lightning-button class="slds-button_outline-brand"  label="Reset" title="Reset" onclick={handleReset}></lightning-button>
+            </div>  
+        </div>   
+    </lightning-card>
+</template>
